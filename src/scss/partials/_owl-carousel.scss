@@ -1,0 +1,65 @@
+.owl-item {
+    overflow: hidden;
+}
+
+.owl-nav {
+
+    position: unset;
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%);
+        overflow: hidden;
+        text-indent: -999px;
+        outline: none;
+        width: 9px;
+        height: 24px;
+        @media ( min-width: 768px ) {
+            width: 12px;
+            height: 31px;
+        }
+        &.owl-prev {
+            left: 2.5rem;
+            background-image: url(../img/arrow_left.svg) !important;
+            background-size: cover !important;
+            @media ( min-width: 768px  ) {
+                left: 4rem;
+            }
+            @media ( min-width: 1200px  ) {
+                left: 7rem;
+            }
+        }
+        &.owl-next {
+            right: 2.5rem;
+            background-image: url(../img/arrow_right.svg) !important;
+            background-size: cover !important;
+            @media ( min-width: 768px  ) {
+                right: 4rem;
+            }
+            @media ( min-width: 1200px  ) {
+                right: 7rem;
+            }
+        }
+    }
+
+}
+
+.owl-dots {
+
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    left: 0;
+    text-align: center;
+
+    .owl-dot {
+        width: 12px;
+        height: 12px;
+        border: 2px solid $color_white !important;
+        border-radius: 30px;
+        margin: 0 3px;
+        &.active { background: $color_white !important;  }
+    }
+
+}

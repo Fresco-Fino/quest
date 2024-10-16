@@ -1,0 +1,87 @@
+.container-fluid + .icons,
+.container-fluid + .icons + .icons {
+    padding-top: 7rem;
+    @media ( min-width: 768px  ) { padding-top: 10rem ; }
+    @media ( min-width: 992px  ) { padding-top: 12rem ; }
+    @media ( min-width: 1200px  ) { padding-top: 14rem ; }
+    @media ( min-width: 1600px  ) { padding-top: 16rem ; }
+}
+
+.icons__list {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+    li {
+
+        flex-basis: 50%;
+        text-align: center;
+        margin-bottom: 3rem;
+        @media ( min-width: 768px ) {
+            flex-basis: 25%;
+            margin-bottom: 6rem;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+            line-height: 1.2em !important;
+            transition: all .3s .1s;
+            transform: translateY(20px);
+            opacity: 0;
+            @media ( min-width: 768px ) {
+                font-size: 1.6rem !important;
+            }
+        }
+
+        img {
+            margin-bottom: 20px;
+            height: 70px;
+            transition: all .3s;
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        &.animation {
+            p, img {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+}
+
+// tabs icons
+.nav-tabs {
+    border: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    @media ( min-width: 768px ) {
+        margin-top: 4rem;
+    }
+    .nav-link {
+        background-color: transparent;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: $color-primary;
+        border: 0;
+        opacity: .75;
+        padding: 0 15px;
+        outline: none;
+        @media ( min-width: 768px ) {
+            font-size: 1.4rem !important;
+            padding: 0 30px;
+        }
+        &.active {
+            text-decoration: underline;
+            opacity: 1;
+            background-color: transparent;
+            border: 0;
+            color: $color-primary;
+        }
+    }
+}
