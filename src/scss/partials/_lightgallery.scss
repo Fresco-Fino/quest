@@ -15,14 +15,13 @@ button.lg-next {
     transform: translate(-50%);
     overflow: hidden;
     text-indent: -999px;
-    width: 9px;
-    height: 24px;
     outline: none;
     background-color: transparent;
-
+    width: 3rem;
+    height: 3rem;
     @media ( min-width: 768px ) {
-        width: 12px;
-        height: 31px;
+        width: 4.5rem;
+        height: 4.5rem;
     }
 
     &:before {
@@ -33,7 +32,7 @@ button.lg-next {
 
 button.lg-prev {
     left: 2.5rem;
-    background-image: url(../img/arrow_left.svg) !important;
+    background-image: url(../img/arrow_left--white.svg) !important;
     background-size: cover !important;
     @media ( min-width: 768px  ) {
         left: 4rem;
@@ -45,7 +44,7 @@ button.lg-prev {
 
 button.lg-next {
     right: 2.5rem;
-    background-image: url(../img/arrow_right.svg) !important;
+    background-image: url(../img/arrow_right--white.svg) !important;
     background-size: cover !important;
     @media ( min-width: 768px  ) {
         right: 4rem;

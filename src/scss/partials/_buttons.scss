@@ -58,6 +58,19 @@
     }
 }
 
+.btn-outline-secondary {
+    background: transparent !important;
+    color: $color_secondary !important;
+    border: 2px solid $color_secondary;
+    path { fill: $color_secondary !important; }
+    &:hover {
+        background: $color_secondary !important;
+        color: $color_primary !important;
+        border: 2px solid $color_secondary;
+        path { fill: $color_primary !important; }
+    }
+}
+
 // BOTON ARROW
 .btn__arrow {
 

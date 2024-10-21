@@ -12,14 +12,14 @@
 	</div>
 </div>
 
-<?php if(!empty($content['video'])): ?>
+<?php  if(!empty($content['video'])): ?>
 	<div class="btn__lg">
 	<a data-lg-size="1280-720" data-src="<?php echo $content['video']; ?>" data-poster="<?php echo $content['video_poster']; ?>" class="">
 		<img src="<?php bloginfo('template_url') ?>/img/play.png" alt="">
 		<?php _e('ver video','gloria') ?>
 	</a>	
 	</div>
-<?php endif; ?>
+<?php endif;  ?>
 
 <div class="banner__container">
 	<!-- BANNER TITULO -->
@@ -29,32 +29,44 @@
 	<div class="banner__content">
 		<?php echo $content['content']; ?>
 	</div>
+	<div class="banner__price">
+		<?php echo $content['price']; ?>
+	</div>
 </div>
 
-<!-- CARRUSEL OWL -->
-<?php if(!empty($media['gallery_mobile'])): ?>
-	<div class="owl-carousel d-none d-lg-block">
-		<?php $m = 1; foreach ($media['gallery'] as $image) { ?>
-			<div class="item" data-position="<?php echo $m; ?>">
-				<img src="<?php echo $image['url']; ?>" >
-			</div>
-		<?php $m++; }  ?>
-	</div>
-	<div class="owl-carousel d-lg-none">
-		<?php $m = 1; foreach ($media['gallery_mobile'] as $image) { ?>
-			<div class="item" data-position="<?php echo $m; ?>">
-				<img src="<?php echo $image['url']; ?>" >
-			</div>
-		<?php $m++; }  ?>
-	</div>
-<?php else: ?>
-	<div class="owl-carousel">
-		<?php $m = 1; foreach ($media['gallery'] as $image) { ?>
-			<div class="item" data-position="<?php echo $m; ?>">
-				<img src="<?php echo $image['url']; ?>" >
-			</div>
-		<?php $m++; }  ?>
-	</div>
+<?php if(!empty($media['video'])): ?>
+
+	<video autoplay loop muted playsinline>
+		<source src="<?php echo $media['video']['url'] ?>" type="video/mp4">
+    </video>
+
+<?php else : ?>
+
+	<!-- CARRUSEL OWL -->
+	<?php if(!empty($media['gallery_mobile'])): ?>
+		<div class="owl-carousel d-none d-lg-block">
+			<?php $m = 1; foreach ($media['gallery'] as $image) { ?>
+				<div class="item" data-position="<?php echo $m; ?>">
+					<img src="<?php echo $image['url']; ?>" >
+				</div>
+			<?php $m++; }  ?>
+		</div>
+		<div class="owl-carousel d-lg-none">
+			<?php $m = 1; foreach ($media['gallery_mobile'] as $image) { ?>
+				<div class="item" data-position="<?php echo $m; ?>">
+					<img src="<?php echo $image['url']; ?>" >
+				</div>
+			<?php $m++; }  ?>
+		</div>
+	<?php else: ?>
+		<div class="owl-carousel">
+			<?php $m = 1; foreach ($media['gallery'] as $image) { ?>
+				<div class="item" data-position="<?php echo $m; ?>">
+					<img src="<?php echo $image['url']; ?>" >
+				</div>
+			<?php $m++; }  ?>
+		</div>
+	<?php endif; ?>
 
 <?php endif; ?>
 

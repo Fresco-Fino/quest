@@ -3,45 +3,17 @@
         $icon_class = ($n==1) ? 'show active' : '';  ?>
         <div class="tab-pane fade <?php echo $icon_class; ?>" id="<?php echo slugify($icon['title']) ?>" role="tabpanel" aria-labelledby="<?php echo slugify($icon['title']) ?>-tab">
             
-            <?php if(!empty($icon['icon_mobile'])): ?>
+            <div class="icons">
+                <ul class="icons__list">
+                    <?php foreach ($icon['icon'] as $item) { ?>
+                        <li>
+                            <img src="<?php echo $item['image']['url']; ?>" alt="">
+                            <?php echo $item['title']; ?>
+                        </li>
+                    <?php }  ?>
+                </ul>
+            </div>        
         
-                <div class="icons d-md-none">
-                    <ul class="icons__list">
-                        <?php foreach ($icon['icon_mobile'] as $item) { ?>
-                            <li>
-                                <img src="<?php echo $item['image']['url']; ?>" alt="">
-                                <?php echo $item['title']; ?>
-                            </li>
-                        <?php }  ?>
-                    </ul>
-                </div>
-
-                <div class="icons d-none d-md-block">
-                    <ul class="icons__list">
-                        <?php foreach ($icon['icon'] as $item) { ?>
-                            <li>
-                                <img src="<?php echo $item['image']['url']; ?>" alt="">
-                                <?php echo $item['title']; ?>
-                            </li>
-                        <?php }  ?>
-                    </ul>
-                </div>
-
-            <?php else: ?>	
-
-                <div class="icons">
-                    <ul class="icons__list">
-                        <?php foreach ($icon['icon'] as $item) { ?>
-                            <li>
-                                <img src="<?php echo $item['image']['url']; ?>" alt="">
-                                <?php echo $item['title']; ?>
-                            </li>
-                        <?php }  ?>
-                    </ul>
-                </div>
-
-            <?php endif; ?>
-
         </div>
     <?php $n++; } ?>
 </div>

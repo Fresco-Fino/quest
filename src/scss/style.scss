@@ -391,7 +391,19 @@
 
 .page-template-page-thankyou {
 
-    footer {
+    background-color: $color_primary;
+    background-image: url(../img/loading.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat !important;
+
+    height: 100vh;
+
+    @media ( min-width: 768px ) {
+        background-position: center left; 
+    }
+
+    footer, header {
         display: none;
     }
 
@@ -401,7 +413,7 @@
 
     header .btn {
         display: none;
-    }
+    }    
 
 }
 
@@ -411,15 +423,15 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    text-align: center;
+    // text-align: center;
 
     background-size: cover;
     background-position: center;
 
-    p, .thankyou__title{
-        color: $color_white; 
+    p, .thankyou__title {
+        color: $color_secondary; 
     }
 
     p {
@@ -478,22 +490,88 @@
 /**************************************************************************/
 .page-template-page-standar {
 
-    background: $color-primary;
-
-    .container {
-        color: $color-secondary;
+    footer {
+        background-color: $color_secondary;
+        ul.menu_footer {
+            li + li {
+                border-left: 1px solid  $color_primary;
+            }
+            a {
+                font-weight: 500;
+                color: $color_primary;
+            }
+    
+        }
     }
+
+    table {
+
+        border: 1px solid $color-primary;     
+        // width: 100%;   
+        // overflow-x: visible;
+
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0 0 18px 0;
+        padding: 0;
+        // border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+
+        @media ( max-width: 767px  ) { 
+            font-size: 10px;
+            line-height: 1.3em;
+        }
+
+        thead {
+            border-bottom: 1px solid $color-primary;
+        }
+
+        td, th {
+            padding: 3px;
+            @media ( min-width: 768px  ) { 
+                padding: 15px;
+            }
+        }
+        td, th {
+            border-bottom: 1px solid $color-primary;
+            border-right: 1px solid $color-primary;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+    }
+
+    // background: $color-primary;
+
+    // .container {
+    //     color: $color-secondary;
+    // }
 
     p, h1, h2, h3, h4, h5 {
         margin-bottom: 20px;
     }
 
     p {
-        color: $color-secondary;
+        // color: $color-secondary;
+    }
+
+    strong {
+        font-weight: bold;
     }
 
     h1, h2, h3, h4 {
-        color: $color-secondary;
+        color: $color-primary;
         font-family: $font-heading;
         font-weight: 300;
     }
@@ -528,8 +606,8 @@
     }
 
     header .btn {
-        @extend .btn-secondary;
-        border: 2px solid $color-secondary !important;
+        // @extend .btn-secondary;
+        // border: 2px solid $color-secondary !important;
     }
 
     .navbar-brand {
@@ -538,27 +616,58 @@
         }
     }
 
+    .navbar-brand {
+        &--white {
+            opacity: 0;
+        }
+        &--black {
+            opacity: 1;
+        }
+    }
+
+    .wpml-ls-legacy-list-horizontal {
+        a {
+            color: $color_primary;
+        }
+        li + li {
+            border-left: 2px solid $color_primary;
+        }
+    }
+
 }
 
 .standar_page {
-    padding: 20rem 0 10rem;
+
+    padding: 10rem 0 3rem;    
+
+    @media ( min-width: 768px ) {
+        padding: 20rem 0 5rem;
+    }
+
     .standar_page__title {
         font-family: $font-heading;
-        color: $color-secondary;
+        // color: $color-secondary;
         margin-bottom: 3rem;
-        font-size: 3.6rem;
+        font-size: 2.5rem;
         font-weight: 300;
         line-height: 1.2em;
         @media ( min-width: 768px ) {
-            font-size: 5rem;
         }
         @media ( min-width: 992px ) {
-            font-size: 6rem;
             margin-bottom: 5rem;
         }
         @media ( min-width: 1200px ) {
-            font-size: 9rem;
+            font-size: 2.5rem;
         }
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        list-style-type: disc;
+        margin-bottom: 10px;
     }
 }
 

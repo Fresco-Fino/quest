@@ -3,28 +3,17 @@
 
 <div class="section_wrap">
 
-	<?php if( !empty($content['title']) || !empty($content['section']) || !empty($content['pre-content']) || !empty($content['content']) ): ?>
-		<div class="container-fluid">
-			<div class="row">
-
-				<div class="col-lg-5">
-
-					<!-- ANIMATION HEAD > number, section y title -->
-					<div class="animated_head">
-						<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-section.php'); ?>
-						<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-title.php'); ?>
-					</div>
-
-				</div>
-
-				<div class="col-lg-6 offset-lg-1 normal__animation">
-					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-precontent.php'); ?>
-					<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-content.php'); ?>
-				</div>
-
+	<div class="container-fluid animated_head">
+		<div class="row">
+			<div class="col-lg-3">
+				<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-section.php'); ?>			
+			</div>
+			<div class="col-lg-5 offset-lg-2 normal__animation">
+				<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-title.php'); ?>
+				<?php include( TEMPLATEPATH . '/template-parts/modules/commons/module-content.php'); ?>				
 			</div>
 		</div>
-	<?php endif; ?>
+	</div>
 
 	<?php if(!empty($icons)): ?>
 		<?php if(!empty(count($icons)>1)): ?>

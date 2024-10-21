@@ -7,14 +7,16 @@
 	$fondo = get_field('fondo'); 
 ?>
 
-<div class="thankyou" style="background-image: url(<?php echo $fondo; ?>);">	
+<div class="thankyou">	
 	<div class="thankyou_wrap">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 offset-md-1 d-flex flex-column align-items-center">
-					<!-- <div class="thankyou__title"><?php echo $titulo; ?></div> -->
-					<img src="<?php bloginfo( 'template_url' ); ?>/img/icono_ok.svg" class="mb-5">					
+				<div class="col-md-10 offset-md-1">	
+					<div class="thankyou__title"><?php echo $titulo; ?>	</div>	
 					<?php echo $contenido; ?>
+					<a href="<?php bloginfo('url') ?>" class="btn btn-outline-secondary mt-5">
+						<?php _e('Volver atrás','quest') ?>
+					</a>
 				</div>
 			</div>
 		</div>

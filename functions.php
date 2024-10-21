@@ -135,14 +135,14 @@ function scripts_theme() {
 /*----------- GOOGLE MAPS ----------*/
 /*----------------------------------*/
 function my_theme_add_scripts() {
-  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDg9OkJZ6kPDrHghixG4_vtGXHNlcYOO1A' );
+  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCI2MLM4rHs9Xo82bm5rYfSEdXT52GgiOw' );
   wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/google.maps.js', array('google-map', 'jquery'), '0.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_add_scripts' );
 
 // Method 2: Setting.
 function my_acf_init() {
-    acf_update_setting('google_api_key', 'AIzaSyDg9OkJZ6kPDrHghixG4_vtGXHNlcYOO1A');
+    acf_update_setting('google_api_key', 'AIzaSyCI2MLM4rHs9Xo82bm5rYfSEdXT52GgiOw');
 }
 add_action('acf/init', 'my_acf_init');
 

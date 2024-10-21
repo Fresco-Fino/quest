@@ -15,19 +15,11 @@
 
 }
 
-// hubspot form
-.hbspt-form {
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    border: 1px solid  rgba($color: #b46532, $alpha: 0.5);
-}
-
 // contact form 7
 .wpcf7-form {
 
     span {
-        color: $color_primary !important;
+        color: $color_secondary !important;
         font-size: 1.4rem;
         line-height: 1.2em;
         @media ( min-width: 992px  ) {  font-size: 1.2rem; }
@@ -42,10 +34,10 @@
         display: none
     }
 
-    img {
-        max-height: 24px;
-        width: auto;
-    }
+    // img {
+    //     max-height: 24px;
+    //     width: auto;
+    // }
 
 }
 
@@ -58,7 +50,7 @@
     label { display: flex; }
 
     a { text-decoration: underline;  }
-    a:hover { color: $color_primary; }
+    a:hover { color: white; }
     span {
         font-size: 1.4rem !important;
         @media ( min-width: 992px  ) {  font-size: 1.2rem !important; }
@@ -86,7 +78,7 @@
             display: inline-block;
             width: 1.5rem;
             height: 1.5rem;
-            border: 1px solid $color-primary;
+            border: 1px solid $color-secondary;
             // border-radius: 100%;
             transition: all 0.3s;
         }
@@ -96,7 +88,7 @@
             height: 0.9rem;
             left: 0.3rem;
             opacity: 0;
-            background-color: $color-primary;
+            background-color: $color-secondary;
             // border-radius: 0.3rem;
             opacity: 1;
         }
@@ -118,9 +110,9 @@ textarea {
     padding-left: 0 !important;
     padding-right: 0 !important;
     background-color: transparent !important;
-    color: $color_primary !important;
+    color: $color_secondary !important;
     border: 0 !important;
-    border-bottom: 1px solid $color_primary !important;
+    border-bottom: 1px solid $color_secondary !important;
     font-size: 1.4rem;
     padding: 1.2rem 0 !important;
     @media ( min-width: 992px  ) {  font-size: 1.2rem; }
@@ -138,7 +130,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: $color_primary;
+  -webkit-text-fill-color: $color_secondary;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
   @media ( min-width: 768px  ) {  -webkit-box-shadow: 0 0 0px 1000px transparent inset; }
@@ -157,9 +149,14 @@ textarea {
 }
 
 // select
-select option {
-    background: $color_white;
+
+select {
     color: $color_primary;
+}
+
+select option {
+    background: $color_secondary;
+    color: $color_primary !important;
     padding: 5px;
     line-height: 1.5em;
 }
@@ -220,12 +217,12 @@ select::-ms-expand {
 }
 
 /****** PLACEGOLDER ******/
-::-webkit-input-placeholder { color: $color_primary !important; transition: all .3s;  }
-::-moz-placeholder { color: $color_primary !important; transition: all .3s;  }
-:-ms-input-placeholder { color: $color_primary !important;  transition: all .3s; }
-:-moz-placeholder { color: $color_primary !important; transition: all .3s;  }
+::-webkit-input-placeholder { color: $color_secondary !important; transition: all .3s;  }
+::-moz-placeholder { color: $color_secondary !important; transition: all .3s;  }
+:-ms-input-placeholder { color: $color_secondary !important;  transition: all .3s; }
+:-moz-placeholder { color: $color_secondary !important; transition: all .3s;  }
 
-input:hover, input:focus, select, textarea {
+input:hover, input:focus, textarea {
     &::-webkit-input-placeholder { color: $color_white !important;  }
     &::-moz-placeholder { color: $color_white !important;  }
     &:-ms-input-placeholder { color: $color_white !important;  }

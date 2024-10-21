@@ -308,7 +308,7 @@ function gallery_carousel() {
 
     owl.owlCarousel({
       loop: true,
-      margin: 0,
+      margin: 25,
       nav: true,
       autoWidth: true,
       items: 3,
