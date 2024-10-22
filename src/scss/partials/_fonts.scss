@@ -2,6 +2,25 @@
 
 @font-face {
     font-family: 'Linear Grotesk';
+    src: url('../font/LinearGrotesk-Light.woff2') format('woff2'),
+        url('../font/LinearGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Linear Grotesk';
+    src: url('../font/LinearGrotesk-Regular.woff2') format('woff2'),
+        url('../font/LinearGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Linear Grotesk';
     src: url('../font/LinearGrotesk-Medium.woff2') format('woff2'),
         url('../font/LinearGrotesk-Medium.woff') format('woff');
     font-weight: 500;

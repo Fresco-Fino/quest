@@ -1,6 +1,20 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Linear Grotesk";
+  src: url("../font/LinearGrotesk-Light.woff2") format("woff2"), url("../font/LinearGrotesk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linear Grotesk";
+  src: url("../font/LinearGrotesk-Regular.woff2") format("woff2"), url("../font/LinearGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Linear Grotesk";
   src: url("../font/LinearGrotesk-Medium.woff2") format("woff2"), url("../font/LinearGrotesk-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -31,7 +45,7 @@
 .fuente_regular, p, body {
   font-family: "Linear Grotesk", sans-serif;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.5em !important;
   color: #000000;
 }
@@ -1934,6 +1948,7 @@ textarea span, .input__label span {
 .module__banner .banner__content p {
   color: #EEE8DC;
   font-size: 1.8rem;
+  font-weight: normal;
 }
 @media (min-width: 768px) {
   .module__banner .banner__content p {
@@ -2386,6 +2401,7 @@ textarea span, .input__label span {
 .icons__list li p {
   font-size: 1.2rem !important;
   line-height: 1.2em !important;
+  font-weight: bold;
   transition: all 0.3s 0.1s;
   transform: translateY(20px);
   opacity: 0;

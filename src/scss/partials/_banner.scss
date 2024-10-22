@@ -107,6 +107,7 @@
     .banner__content p {
         color: $color-secondary;
         font-size: 1.8rem;
+        font-weight: normal;
         @media ( min-width: 768px  ) { 
             font-size: 2.4rem;
             width: 70%;
