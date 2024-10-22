@@ -27,10 +27,8 @@
 			<img src="<?php bloginfo( 'template_url' ); ?>/img/brand.png" alt=""  class="navbar-brand--white"> 
 			<img src="<?php bloginfo( 'template_url' ); ?>/img/brand-black.png" alt="" class="navbar-brand--black">
 
-			<?php if(is_front_page()): ?>
-				
-			<?php else: ?>
-				
+			<?php if(is_front_page()): ?>				
+			<?php else: ?>				
 			<?php endif; ?>
 
 		</a>
@@ -39,9 +37,9 @@
 			<?php do_action('wpml_add_language_selector'); ?>
 
 			<?php if(is_front_page()): ?>
-				<a href="#contacto" class="btn btn-primary btn_ancla_contact"><?php _e('CONTÁCTANOS','queens'); ?></a>
+				<a href="#contacto" class="btn btn-primary btn_ancla_contact"><?php _e('Contacto','quest'); ?></a>
 			<?php else: ?>
-				<a href="<?php bloginfo('url'); ?>/#contacto" class="btn btn-primary"><?php _e('CONTÁCTANOS','queens'); ?></a>
+				<a href="<?php bloginfo('url'); ?>/#contacto" class="btn btn-primary"><?php _e('Contacto','quest'); ?></a>
 			<?php endif; ?>
 
 		</div>		

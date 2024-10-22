@@ -31,7 +31,7 @@
 .fuente_regular, p, body {
   font-family: "Linear Grotesk", sans-serif;
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5em !important;
   color: #000000;
 }
@@ -524,6 +524,10 @@ p {
   margin: 0;
 }
 
+strong {
+  font-weight: bold;
+}
+
 a {
   color: #000000;
   text-decoration: none;
@@ -818,8 +822,7 @@ header .navbar-brand--black {
   }
 }
 .wpml-ls-legacy-list-horizontal a {
-  text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 12px;
   opacity: 0.5;
   margin: 0;
@@ -1023,8 +1026,10 @@ button.lg-next {
 }
 
 .wpcf7-form span {
+  font-family: "Linear Grotesk", sans-serif;
   color: #EEE8DC !important;
   font-size: 1.4rem;
+  font-weight: 500;
   line-height: 1.2em;
 }
 @media (min-width: 992px) {
@@ -1405,11 +1410,9 @@ input[type=email],
 input[type=tel],
 select,
 textarea, .input__label {
-  font-family: "DM Sans";
-  text-transform: uppercase;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1em;
   border: 0;
   border-radius: 100px;
@@ -1423,7 +1426,7 @@ textarea, .input__label {
   select,
   textarea, .input__label {
     padding: 1.8rem 4rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 .buttons span, .btn span, input span,
@@ -1907,24 +1910,24 @@ textarea span, .input__label span {
 .module__banner .banner__title {
   font-family: "ITC Avant Garde Gothic Std Demi", sans-serif;
   color: #EEE8DC;
-  font-size: 4.2rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .module__banner .banner__title {
-    font-size: 6rem;
+    font-size: 5rem;
     margin-bottom: 20px;
   }
 }
 @media (min-width: 1200px) {
   .module__banner .banner__title {
-    font-size: 8rem;
+    font-size: 6rem;
     margin-bottom: 20px;
   }
 }
 @media (min-width: 1600px) {
   .module__banner .banner__title {
-    font-size: 9rem;
+    font-size: 7rem;
     margin-bottom: 20px;
   }
 }
@@ -2483,7 +2486,7 @@ textarea span, .input__label span {
 
 .module__title {
   font-family: "ITC Avant Garde Gothic Std Demi", sans-serif;
-  line-height: 0.9;
+  line-height: 1.1;
   font-size: 2.4rem;
   margin-bottom: 4rem;
 }
@@ -2494,18 +2497,18 @@ textarea span, .input__label span {
 }
 @media (min-width: 992px) {
   .module__title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin-bottom: 4rem;
   }
 }
 @media (min-width: 1200px) {
   .module__title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 @media (min-width: 1600px) {
   .module__title {
-    font-size: 6.8rem;
+    font-size: 6rem;
   }
 }
 .module__title span span {
@@ -3064,9 +3067,6 @@ textarea span, .input__label span {
 }
 .page-template-page-standar p, .page-template-page-standar h1, .page-template-page-standar h2, .page-template-page-standar h3, .page-template-page-standar h4, .page-template-page-standar h5 {
   margin-bottom: 20px;
-}
-.page-template-page-standar strong {
-  font-weight: bold;
 }
 .page-template-page-standar h1, .page-template-page-standar h2, .page-template-page-standar h3, .page-template-page-standar h4 {
   color: #000000;

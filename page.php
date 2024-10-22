@@ -154,7 +154,7 @@ $contacto = get_field('contacto');
 	                  </div>
 	                  <div class="distance">
 						<span>
-							<?php echo $minutos; ?>'  <?php _e('desde Queens', 'queens'); ?>
+							<?php echo $minutos; ?>'  <?php _e('desde Queens', 'quest'); ?>
 						</span>
 	                  </div>
 		            </div>
